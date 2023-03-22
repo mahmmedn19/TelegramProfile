@@ -10,7 +10,7 @@
         android:id="@+id/container"
         android:layout_width="match_parent"
         android:layout_height="350dp"
-        android:background="#212D3B"
+        android:background="#1C262F"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -33,7 +33,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="44dp"
         android:contentDescription="@null"
         android:src="@drawable/ic_arrow"
         app:layout_constraintStart_toStartOf="@id/container"
@@ -44,7 +44,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="40dp"
         android:contentDescription="@null"
         android:src="@drawable/ic_setting"
         app:layout_constraintEnd_toEndOf="@id/container"
@@ -55,7 +55,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="48dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="40dp"
         android:contentDescription="@null"
         android:src="@drawable/ic_call"
         app:layout_constraintEnd_toEndOf="@id/ic_setting"
@@ -66,7 +66,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:text="@string/text_name"
-        android:textColor="@color/md_theme_light_onPrimary"
+        android:textColor="#ECE8E8"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@id/profile_status"
@@ -78,10 +78,24 @@
         android:layout_height="0dp"
         android:layout_marginBottom="16dp"
         android:text="@string/status"
-        android:textColor="@color/md_theme_dark_onBackground"
+        android:textColor="@color/md_theme_dark_onSurfaceVariant"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@id/container"
         app:layout_constraintStart_toStartOf="@id/profile_name" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floating_action_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="294dp"
+        android:contentDescription="@null"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView"
+        app:layout_constraintEnd_toEndOf="@+id/container"
+        android:backgroundTint="@color/md_theme_dark_tertiary"
+        app:tint="@null"
+        app:layout_constraintTop_toBottomOf="@id/container"
+        app:srcCompat="@drawable/ic_message" />
 
     <androidx.core.widget.NestedScrollView
         android:id="@+id/scrollView"
@@ -107,17 +121,15 @@
                 android:layout_height="wrap_content"
                 android:background="@color/md_theme_dark_secondary"
                 android:orientation="vertical"
-                android:padding="16dp"
-                >
+                android:padding="16dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/info"
-                    android:textStyle="bold"
                     android:textColor="@color/md_theme_light_tertiary"
                     android:textSize="16sp"
-                    />
+                    android:textStyle="bold" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -126,11 +138,10 @@
                     android:orientation="vertical">
 
                     <TextView
+                        style="@style/TextStyleSubtitle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/_20_1154272490"
-                        style="@style/TextStyleSubtitle"
-                        />
+                        android:text="@string/_20_1154272490" />
 
                     <TextView
                         style="@style/TextStyleHint"
@@ -153,6 +164,17 @@
 
                         <com.google.android.material.divider.MaterialDivider style="@style/dividerStyle" />
 
+                        <TextView
+                            style="@style/TextStyleSubtitle"
+                            android:text="@string/android_dev" />
+
+                        <TextView
+                            style="@style/TextStyleHint"
+                            android:text="@string/bio" />
+
+
+                        <com.google.android.material.divider.MaterialDivider style="@style/dividerStyle" />
+
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -160,11 +182,11 @@
 
                             <TextView
                                 style="@style/TextStyleSubtitle"
-                                android:text="@string/android_dev" />
+                                android:text="@string/notifications" />
 
                             <TextView
                                 style="@style/TextStyleHint"
-                                android:text="@string/bio" />
+                                android:text="@string/notifications_on" />
 
                         </LinearLayout>
                     </LinearLayout>
@@ -174,17 +196,39 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:background="@color/md_theme_dark_secondary"
-                android:orientation="vertical"
-                android:padding="16dp"
-                android:layout_marginTop="8dp">
+                android:orientation="vertical">
 
                 <TextView
                     style="@style/TextStyleTitle"
+                    android:layout_marginStart="16dp"
                     android:layout_marginBottom="8dp"
                     android:text="@string/media" />
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
 
+                    <ImageView
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/ramdan" />
+
+                    <ImageView
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/ramdan" />
+
+                    <ImageView
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/ramdan" />
+                </LinearLayout>
 
 
             </LinearLayout>
