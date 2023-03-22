@@ -4,10 +4,12 @@
     <string name="mobile">Mobile</string>
     <string name="_20_1154272490">+20 1154272490</string>
     <string name="text_name">Mohamed Naser</string>
-    <string name="status">Online</string>
+    <string name="status">online</string>
     <string name="user_name">\@mahmmedn19</string>
     <string name="username">Username</string>
     <string name="android_dev">Android Dev</string>
     <string name="bio">Bio</string>
     <string name="media">Media</string>
+    <string name="notifications">Notifications</string>
+    <string name="notifications_on">On</string>
 </resources>
